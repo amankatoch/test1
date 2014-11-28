@@ -1,0 +1,12 @@
+%h1
+  homepage
+
+
+%h2 hello
+- @user.each do |user|
+  %p
+    User: #{link_to user.email, user}
+ 
+%h6
+  if member_signed_in?
+  hello

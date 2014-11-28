@@ -1,0 +1,27 @@
+%h1 Listing cardregistrations
+
+%table
+  %tr
+    %th Ip address
+    %th First name
+    %th Last name
+    %th Card type
+    %th Card expires on
+    %th
+    %th
+    %th
+
+  - @cardregistrations.each do |cardregistration|
+    %tr
+      %td= cardregistration.ip_address
+      %td= cardregistration.first_name
+      %td= cardregistration.last_name
+      %td= cardregistration.card_type
+      %td= cardregistration.card_expires_on
+      %td= link_to 'Show', cardregistration
+      %td= link_to 'Edit', edit_cardregistration_path(cardregistration)
+      %td= link_to 'Destroy', cardregistration, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Cardregistration', new_cardregistration_path

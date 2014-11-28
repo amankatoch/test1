@@ -1,0 +1,14 @@
+%h3 Home
+
+= link_to 'Login', new_user_session_path
+- @users.each do |user|
+  %p
+    User: #{link_to user.email, user}
+
+- if user_signed_in?
+  %li
+    
+    =link_to 'Login', new_user_session_path
+-else
+  %p
+    sorry

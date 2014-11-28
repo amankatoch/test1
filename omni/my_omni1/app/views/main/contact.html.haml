@@ -1,0 +1,6 @@
+- unless @contacts.nil?
+  - @contacts.each do |c|
+    %ul
+      %li
+        = c[:name]
+        = c[:email]

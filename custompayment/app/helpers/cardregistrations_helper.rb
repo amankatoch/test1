@@ -1,0 +1,2 @@
+module CardregistrationsHelper
+end
