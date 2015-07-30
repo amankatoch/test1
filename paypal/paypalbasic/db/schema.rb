@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141128065449) do
+ActiveRecord::Schema.define(version: 20141201064907) do
 
   create_table "card_transactions", force: true do |t|
     t.integer  "card_id"
@@ -53,6 +53,13 @@ ActiveRecord::Schema.define(version: 20141128065449) do
     t.string   "company"
     t.string   "email"
     t.string   "telephone"
+    t.string   "ip_address"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "card_type"
+    t.string   "card_number"
+    t.string   "card_verification"
+    t.date     "card_expires_on"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "notification_params"
@@ -62,5 +69,10 @@ ActiveRecord::Schema.define(version: 20141128065449) do
   end
 
   add_index "registrations", ["course_id"], name: "index_registrations_on_course_id"
+
+  create_table "s", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

@@ -8,4 +8,5 @@ class ApplicationController < ActionController::Base
   def get_courses
     @courses = Course.all
   end
+
 end
